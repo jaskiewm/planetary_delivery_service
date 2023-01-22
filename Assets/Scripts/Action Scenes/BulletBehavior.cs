@@ -18,19 +18,24 @@ public class BulletBehavior : MonoBehaviour
 
     void Update()
     {
-        if (zHasShot == false) {
+        if (zHasShot == false)
+        {
             //If you click "Z", the bullet will have a force in the +ve x direction
-            if (Input.GetKeyDown("z") & Time.timeScale != 0f) {
+            if (Input.GetKeyDown("z") & Time.timeScale != 0f)
+            {
                 PlayerShoots();
             }
             //If you click "Z", the bullet will have a force in the +ve x direction automatically, but only if aSC is >150
-            if (Input.GetKey("z") & Time.timeScale != 0f) {
+            if (Input.GetKey("z") & Time.timeScale != 0f)
+            {
                 autoShootCounter += 1f;
-                if (autoShootCounter > 200) {
+                if (autoShootCounter > 200)
+                {
                     PlayerShoots();
                 }
             }
         }
+
         if (overHeatCounter > 0 & zHasShot == false)
         {
             overHeatCounter -= 0.03f;
@@ -60,7 +65,6 @@ public class BulletBehavior : MonoBehaviour
     public void PlayerShoots()
     {
         Rigidbody2D projectileInstance;
-
         projectileInstance = Instantiate(projectile, ShipFrontEnd.position, ShipFrontEnd.rotation);
         projectileInstance.AddForce(transform.right * projectileSpeed);
         autoShootCounter = 0;

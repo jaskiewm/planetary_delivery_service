@@ -4,21 +4,12 @@ using UnityEngine;
 
 public class Destruction : MonoBehaviour
 {
-    //Bullet destroyed after x seconds
-    void Start()
-    {
-        if (gameObject.tag == "Projectile")
-        {
-            Destroy(gameObject, 3f);
-        }
-    }
-
     //Destroyed on impact
-    private void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
         var tagName = col.gameObject.tag;
 
-        if (tagName == "spaceship" || tagName == "Projectile" || gameObject.tag == "projectile")
+        if (tagName == "Projectile")
         {
             Destroy(gameObject);
             if (gameObject.tag == "Enemy")

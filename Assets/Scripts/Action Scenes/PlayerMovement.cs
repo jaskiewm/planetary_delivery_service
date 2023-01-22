@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalMovement;
     private float verticalMovement;
     private float playerSpeed = 1f;
-    private float playerSpeedFinal = 3.75f;
-    private float playerAcceleration = 1.01f;
+    private float playerSpeedFinal = 5f;
+    private float playerAcceleration = 1.1f;
     bool rightMove;
     bool leftMove;
     bool upMove;
