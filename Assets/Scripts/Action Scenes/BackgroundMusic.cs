@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BackgroundMusic : MonoBehaviour
 {
     public AudioSource AudioSource;
-    //public UnityEngine.UI.Text AudioPercentage;
+    public UnityEngine.UI.Text AudioPercentage;
 
     private float musicVolume = 0.25f;
     private float musicNumber;
@@ -30,7 +30,7 @@ public class BackgroundMusic : MonoBehaviour
         }
         musicNumber = (musicVolume * 100);
         musicNumber = (int)musicNumber;
-        //AudioPercentage.text = musicNumber.ToString() + "%";
+        AudioPercentage.text = musicNumber.ToString() + "%";
     }
     public void updateVolume(float volume)
     {

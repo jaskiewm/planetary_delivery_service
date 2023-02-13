@@ -10,8 +10,19 @@ public class BulletDestruction : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
-    // Update is called once per frame
-    private void OnCollisionEnter2D(Collision2D col)
+    void Update()
+    {
+        if (gameObject.transform.position.x <= -9.5f)
+        {
+            Destroy(gameObject);
+        } else if (gameObject.transform.position.x >= 9.5f)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+        // Update is called once per frame
+        private void OnCollisionEnter2D(Collision2D col)
     {
         Destroy(gameObject);
     }

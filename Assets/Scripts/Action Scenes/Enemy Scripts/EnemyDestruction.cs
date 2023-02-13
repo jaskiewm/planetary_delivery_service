@@ -8,11 +8,10 @@ public class EnemyDestruction : MonoBehaviour
     {
         var tagName = col.gameObject.tag;
 
-        PlayerScore.scoreValue += 1;
-
         if (tagName == "Projectile")
         {
             Destroy(gameObject);
+            PlayerScore.scoreValue += 1;
         }
     }
 }

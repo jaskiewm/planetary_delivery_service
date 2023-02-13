@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public float invincibleTimeStart = 5;
     public float invincibleTime;
     public Slider healthSlider;
+    public Slider invincibleSlider;
 
     // Start is called before the first frame update
     private void Start()
@@ -32,15 +33,11 @@ public class PlayerHealth : MonoBehaviour
             invincibleTime = invincibleTimeStart;
         }
         SetHealth(health);
-
-        if (Input.GetKey(KeyCode.X) && invincibility == false)
-        {
-            receiveSpaceshipDamage(1);
-        }
-
+        invincibleSlider.value = invincibleTime;
     }
-    private void OnCollisionEnter(Collision col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log("HIT");
         if (health > 0 && invincibility == false)
         {
             receiveSpaceshipDamage(1);

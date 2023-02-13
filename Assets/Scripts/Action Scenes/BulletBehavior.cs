@@ -29,7 +29,7 @@ public class BulletBehavior : MonoBehaviour
             if (Input.GetKey("z") & Time.timeScale != 0f)
             {
                 autoShootCounter += 1f;
-                if (autoShootCounter > 200)
+                if (autoShootCounter > 100)
                 {
                     PlayerShoots();
                 }
@@ -38,16 +38,16 @@ public class BulletBehavior : MonoBehaviour
 
         if (overHeatCounter > 0 & zHasShot == false)
         {
-            overHeatCounter -= 0.03f;
+            overHeatCounter -= 0.1f;
         }
 
-        if (overHeatCounter > 100 & zHasShot == false)
+        if (overHeatCounter > 200 & zHasShot == false)
         {
             zHasShot = true;
         }
-        else if (overHeatCounter > 0 & overHeatCounter < 200 & zHasShot == true)
+        else if (overHeatCounter > 0 & overHeatCounter <= 300 & zHasShot == true)
         {
-            overHeatCounter -= 0.1f;
+            overHeatCounter -= 0.15f;
         }
         else if (overHeatCounter < 0 & zHasShot == true)
         {
@@ -68,6 +68,6 @@ public class BulletBehavior : MonoBehaviour
         projectileInstance = Instantiate(projectile, ShipFrontEnd.position, ShipFrontEnd.rotation);
         projectileInstance.AddForce(transform.right * projectileSpeed);
         autoShootCounter = 0;
-        overHeatCounter += 10;
+        overHeatCounter += 25f;
     }
 }
