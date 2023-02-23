@@ -3702,7 +3702,7 @@ MonoBehaviour:
   - {fileID: 645086334}
   enemies:
   - {fileID: 1715437571337791691, guid: 8e3eb889d39065f468889492c0567e2a, type: 3}
-  - {fileID: 1715437571337791691, guid: 8e3eb889d39065f468889492c0567e2a, type: 3}
+  - {fileID: 2306853607468206707, guid: 2fe224fb5665cd04c9b4918d0750f585, type: 3}
   spawningInterval: 5
 --- !u!4 &1799266674
 Transform:

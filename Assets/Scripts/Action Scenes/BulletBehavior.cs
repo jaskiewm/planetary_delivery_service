@@ -20,16 +20,27 @@ public class BulletBehavior : MonoBehaviour
     {
         if (zHasShot == false)
         {
-            //If you click "Z", the bullet will have a force in the +ve x direction
-            if (Input.GetKeyDown("z") & Time.timeScale != 0f)
+            if (options.movementOption == true)
             {
-                PlayerShoots();
+                //If you click "Z", the bullet will have a force in the +ve x direction
+                if (Input.GetKeyDown("z") & Time.timeScale != 0f)
+                {
+                    PlayerShoots();
+                }
+                //If you click "Z", the bullet will have a force in the +ve x direction automatically, but only if aSC is >150
+                if (Input.GetKey("z") & Time.timeScale != 0f)
+                {
+                    autoShootCounter += 1f;
+                    if (autoShootCounter > 100)
+                    {
+                        PlayerShoots();
+                    }
+                }
             }
-            //If you click "Z", the bullet will have a force in the +ve x direction automatically, but only if aSC is >150
-            if (Input.GetKey("z") & Time.timeScale != 0f)
+            else if (options.movementOption == false)
             {
-                autoShootCounter += 1f;
-                if (autoShootCounter > 100)
+                //If you click "mouse button down", the bullet will have a force in the +ve x direction
+                if (Input.GetMouseButtonDown(0) & Time.timeScale != 0f)
                 {
                     PlayerShoots();
                 }

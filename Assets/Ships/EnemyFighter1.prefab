@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3801576186233823131}
   - component: {fileID: 4019303539674498930}
   - component: {fileID: 3952740747019167921}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyFighter1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -129,6 +129,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 7714358251773762584}
     m_Modifications:
     - target: {fileID: 1698101970, guid: 5f7346fcd0a0f5047a5aab898b6e4d6e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698101970, guid: 5f7346fcd0a0f5047a5aab898b6e4d6e, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -207,6 +211,10 @@ PrefabInstance:
     - target: {fileID: 5717698755040639068, guid: 5f7346fcd0a0f5047a5aab898b6e4d6e, type: 3}
       propertyPath: m_Name
       value: Alien 4 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7264247352594237906, guid: 5f7346fcd0a0f5047a5aab898b6e4d6e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7264247352594237906, guid: 5f7346fcd0a0f5047a5aab898b6e4d6e, type: 3}
       propertyPath: m_TagString

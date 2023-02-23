@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1730647076207026334}
-  - component: {fileID: -4331665864577486511}
   - component: {fileID: 3780005408598006691}
   - component: {fileID: 4438676890850575207}
-  m_Layer: 0
+  - component: {fileID: 1575422326295675657}
+  - component: {fileID: -5854829579999602216}
+  m_Layer: 6
   m_Name: EnemyFighter2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -35,20 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4331665864577486511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2306853607468206707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa023c50356c6e946a213b137af8fd68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyProjectile: {fileID: 1333261530125783206, guid: 2d0ce7d6b71283f40a4efe9ce3b63793, type: 3}
-  enemyShipFrontEnd: {fileID: 3639886981897259355}
 --- !u!114 &3780005408598006691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +93,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1575422326295675657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306853607468206707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d424b020daa56418904b992ece3b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyShip: {fileID: 2306853607468206707}
+--- !u!114 &-5854829579999602216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306853607468206707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390b71338987469468c08c3f8a123f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyProjectile: {fileID: 1333261530125783206, guid: 2d0ce7d6b71283f40a4efe9ce3b63793, type: 3}
+  enemyShipFrontEnd: {fileID: 3639886981897259355}
 --- !u!1001 &4831477011851244180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,9 +132,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProjectileEnemySpawn2
       objectReference: {fileID: 0}
+    - target: {fileID: 3368243793620042757, guid: 4d6f4ad1913c9dd4f856e5606cc7a7f0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4877453397569098908, guid: 4d6f4ad1913c9dd4f856e5606cc7a7f0, type: 3}
       propertyPath: m_Name
       value: EnemyFighter2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877453397569098908, guid: 4d6f4ad1913c9dd4f856e5606cc7a7f0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7541047279123159345, guid: 4d6f4ad1913c9dd4f856e5606cc7a7f0, type: 3}
       propertyPath: m_RootOrder

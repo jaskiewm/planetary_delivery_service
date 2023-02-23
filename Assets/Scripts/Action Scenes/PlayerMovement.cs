@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     private float playerSpeedKey = 3f;
     private float playerSpeedFinal = 8f;
     private float playerAcceleration = 1.1f;
+    private Vector2 fixedYMove;
+    private Vector2 fixedXMove;
     bool rightMove;
     bool leftMove;
     bool upMove;
@@ -62,10 +64,38 @@ public class PlayerMovement : MonoBehaviour
             scoreText.GetComponent<CanvasGroup>().alpha = 1f;
         }
 
-        if (movementOption == false) {
-        //Player Movement to follow mouse
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = Vector2.MoveTowards(transform.position, mousePosition, Time.deltaTime * playerSpeedMouse);
+
+        //Player Movement to follow mouse
+        if (movementOption == false && mousePosition.y >= 4.56 || mousePosition.y <= -4.56)
+        {
+            if (mousePosition.y >= 4.56)
+            {
+                fixedYMove = new Vector2(mousePosition.x, 4.56f);
+            }
+            else
+            {
+                fixedYMove = new Vector2(mousePosition.x, -4.56f);
+            }
+            
+            transform.position = Vector2.MoveTowards(transform.position, fixedYMove, Time.deltaTime * playerSpeedMouse);
+        }
+        else if (movementOption == false && (mousePosition.x >= 8.65 || mousePosition.x <= -8.65))
+        {
+            if (mousePosition.x >= 8.65)
+            {
+                fixedXMove = new Vector2(8.65f, mousePosition.y);
+            }
+            else
+            {
+                fixedXMove = new Vector2(-8.65f,mousePosition.y);
+            }
+
+            transform.position = Vector2.MoveTowards(transform.position, fixedXMove, Time.deltaTime * playerSpeedMouse);
+        }
+        else if (movementOption == false)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, mousePosition, Time.deltaTime * playerSpeedMouse);
         }
 
         //Player Movement using keys
