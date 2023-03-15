@@ -11,7 +11,7 @@ public class EnemyDestruction : MonoBehaviour
         if (tagName == "Projectile")
         {
             Destroy(gameObject);
-            PlayerScore.scoreValue += 1;
+            PlayerScore.scoreValue += 2;
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy1Shooting : MonoBehaviour
+public class Enemy3Shooting : MonoBehaviour
 {
     public Rigidbody2D enemyProjectile;
     public Transform enemyShipFrontEnd;
@@ -14,7 +14,7 @@ public class Enemy1Shooting : MonoBehaviour
     void Update()
     {
         shootingTime += Time.deltaTime;
-        enemyShootTime = Random.Range(2f,5f);
+        enemyShootTime = Random.Range(2f, 5f);
 
         //Enemy shoots once X time passes (random)
         if (shootingTime >= enemyShootTime && enemyShipFrontEnd.transform.position.x < 8)

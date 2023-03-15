@@ -1,11 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-public class Enemy2Movement : MonoBehaviour
+public class EnemyBossMovement : MonoBehaviour
 {
+
     private float enemyHorMovement;
     private float enemyVerMovement;
     private float enemySpeed = 1f;
@@ -16,7 +15,6 @@ public class Enemy2Movement : MonoBehaviour
     private float enemyAccelerationTime = 0.5f;
     private float enemyXPosition;
     private float enemyYPosition;
-
     bool enemyMoveX = false;
 
     float randomXPosition;
@@ -50,41 +48,30 @@ public class Enemy2Movement : MonoBehaviour
             movementCooldownY = 0f;
         }
 
-        if (enemyMoveX == true)
-        {
-            if(enemyXPosition >= (randomXPosition + 1.5f))
-            {
-                enemyHorMovement = -0.1f;
-                movementCooldownX = 1f;
-            }
-            else if (enemyXPosition <= randomXPosition)
-            {
-                enemyHorMovement = 0.1f;
-                movementCooldownX = 1f;
-            }
-        }
 
         //if the enemy goes between random X Position and +1, it moves left or right at 0.1f 
 
         //Y Movement for player 
         if (enemyYPosition < 4.4 && enemyYPosition > -4.4 && movementCooldownY <= 0)
         {
-            enemyVerMovement = Random.Range(-0.2f, 0.2f);
-            movementCooldownY = 2f;
+            enemyVerMovement = Random.Range(-0.1f, 0.1f);
+            movementCooldownY = 6f;
         }
-        else if (enemyYPosition > 4.4)
+        else if (enemyYPosition > 2.9)
         {
             //enemyVerMovement = Random.Range(-0.1f, -0.2f);
             //movementCooldownY = 2f;
-            enemyVerMovement = -0.2f;
+            enemyVerMovement = -0.1f;
             movementCooldownY = Random.Range(2f, 3f);
+            movementCooldownY = 6f;
         }
-        else if (enemyYPosition < -4.4)
+        else if (enemyYPosition < -2.9)
         {
             //enemyVerMovement = Random.Range(0.1f, 0.2f);
             //movementCooldownY = 2f;
-            enemyVerMovement = 0.2f;
+            enemyVerMovement = 0.1f;
             movementCooldownY = Random.Range(2f, 3f);
+            movementCooldownY = 6f;
         }
         //Cooldown Timer after Y movement
         if (movementCooldownY > 0)
@@ -118,7 +105,7 @@ public class Enemy2Movement : MonoBehaviour
 
         //enemyHorMovement = transform.position.x + enemyHorMovement;
 
-        Vector2 Direction = new Vector2(enemyHorMovement, enemyVerMovement) *Time.deltaTime * enemySpeed;
+        Vector2 Direction = new Vector2(enemyHorMovement, enemyVerMovement) * Time.deltaTime * enemySpeed;
         transform.Translate(Direction);
 
         //Vector2 moveNext = new Vector2(enemyXPosition, enemyVerMovement);

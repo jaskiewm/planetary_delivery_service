@@ -10,10 +10,10 @@ public class PlayerMovement : MonoBehaviour
     private bool movementOption;
     private float horizontalMovement;
     private float verticalMovement;    
-    private float playerSpeedMouse = 4f;
+    private float playerSpeedMouse = 6f;
     private float playerSpeedKey = 3f;
-    private float playerSpeedFinal = 8f;
-    private float playerAcceleration = 1.1f;
+    private float playerSpeedFinal = 6f;
+    private float playerAcceleration = 1.05f;
     private Vector2 fixedYMove;
     private Vector2 fixedXMove;
     bool rightMove;

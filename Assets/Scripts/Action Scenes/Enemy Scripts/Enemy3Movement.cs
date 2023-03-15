@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Enemy2Movement : MonoBehaviour
+public class Enemy3Movement : MonoBehaviour
 {
     private float enemyHorMovement;
     private float enemyVerMovement;
@@ -25,7 +25,7 @@ public class Enemy2Movement : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        randomXPosition = Random.Range(4f, 5f);
+        randomXPosition = Random.Range(0f, 3f);
     }
 
     void Update()

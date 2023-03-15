@@ -37,7 +37,6 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("HIT");
         if (health > 0 && invincibility == false)
         {
             receiveSpaceshipDamage(1);
