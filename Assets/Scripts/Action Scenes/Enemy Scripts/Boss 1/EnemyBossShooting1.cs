@@ -45,7 +45,6 @@ public class EnemyBossShooting1 : MonoBehaviour
     IEnumerator shootingTypesFullHealth()
     {
         int randomNum = UnityEngine.Random.Range(1, 4);
-        Debug.Log(randomNum);
         Rigidbody2D projectileInstance;
 
         switch (randomNum)
@@ -82,13 +81,14 @@ public class EnemyBossShooting1 : MonoBehaviour
     IEnumerator shootingTypesHalfHealth()
     {
         int randomNum = UnityEngine.Random.Range(1, 4);
-        Debug.Log(randomNum);
         Rigidbody2D projectileInstance;
+
+        // Switch is used to determine which attack will occur
 
         switch (randomNum)
         {
             case 1:
-                for (int j = 0; j <3; j++) {
+                for (int j = 0; j <3; j++) { //j variable for loop is for looping the same attack multiple times
                     for (int i = 0; i < bulletDirection.Length; i++)
                     {
                         bulletDirectionVector = new Vector2(-1f, bulletDirection[i]).normalized; ;
@@ -99,8 +99,8 @@ public class EnemyBossShooting1 : MonoBehaviour
                 }
                 break;
             case 2:
-                for (int j = 0; j < 3; j++)
-                {
+                for (int j = 0; j < 3; j++) //j variable for loop is for looping the same attack multiple times
+                { 
                     for (int i = bulletDirection.Length - 1; i >= 0; i--)
                     {
                         bulletDirectionVector = new Vector2(-1f, bulletDirection[i]).normalized; ;
@@ -126,4 +126,5 @@ public class EnemyBossShooting1 : MonoBehaviour
         yield return null;
 
     }
+
 }

@@ -23,7 +23,17 @@ public class EnemySpawning : MonoBehaviour
     private IEnumerator spawnEnemy(float interval)
     {
         spawningInterval = Random.Range(1f,3f);
-        if (enemySpawnCounter < Random.Range(15, 20) && enemySpawnCounter <= 10)
+
+        if (enemySpawnCounter <= 10)
+        {
+            enemySpawnCounter += 1;
+            yield return new WaitForSeconds(interval);
+            int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+            int enemySpawned = Random.Range(0, 2);
+            GameObject newEnemy = Instantiate(enemies[enemySpawned], spawnPoints[randSpawnPoint].position, transform.rotation);
+            StartCoroutine(spawnEnemy(interval));
+        }
+        if (enemySpawnCounter > 10 && enemySpawnCounter <= 20)
         {
             enemySpawnCounter += 1;
             yield return new WaitForSeconds(interval);
@@ -33,7 +43,7 @@ public class EnemySpawning : MonoBehaviour
             StartCoroutine(spawnEnemy(interval));
         }
 
-        if (enemySpawnCounter == 11)
+        if (enemySpawnCounter == 21)
         {
             enemySpawnCounter += 1;
             yield return new WaitForSeconds(10f);

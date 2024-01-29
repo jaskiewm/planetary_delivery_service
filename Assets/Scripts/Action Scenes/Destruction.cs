@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Destruction : MonoBehaviour
 {
+
     //Destroyed on impact
     private void OnCollisionEnter2D(Collision2D col)
     {
@@ -12,10 +14,6 @@ public class Destruction : MonoBehaviour
         if (tagName == "Projectile")
         {
             Destroy(gameObject);
-            if (gameObject.tag == "Enemy")
-            {
-                //Score.scoreValue += 1;
-            }
         }
     }
 }
