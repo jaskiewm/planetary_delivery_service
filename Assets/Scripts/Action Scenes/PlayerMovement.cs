@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movementOption = options.movementOption;
 
+        // Get key movements from player
         rightMove = Input.GetKey(KeyCode.RightArrow);
         leftMove = Input.GetKey(KeyCode.LeftArrow);
         upMove = Input.GetKey(KeyCode.UpArrow);
@@ -78,7 +79,8 @@ public class PlayerMovement : MonoBehaviour
                 fixedYMove = new Vector2(mousePosition.x, -4.56f);
             }
             
-            transform.position = Vector2.MoveTowards(transform.position, fixedYMove, Time.deltaTime * playerSpeedMouse);
+            transform.position = Vector2.MoveTowards(transform.position, 
+                fixedYMove, Time.deltaTime * playerSpeedMouse);
         }
         else if (movementOption == false && (mousePosition.x >= 8.65 || mousePosition.x <= -8.65))
         {
@@ -91,26 +93,21 @@ public class PlayerMovement : MonoBehaviour
                 fixedXMove = new Vector2(-8.65f,mousePosition.y);
             }
 
-            transform.position = Vector2.MoveTowards(transform.position, fixedXMove, Time.deltaTime * playerSpeedMouse);
+            transform.position = Vector2.MoveTowards(transform.position, 
+                fixedXMove, Time.deltaTime * playerSpeedMouse);
         }
         else if (movementOption == false)
         {
-            transform.position = Vector2.MoveTowards(transform.position, mousePosition, Time.deltaTime * playerSpeedMouse);
+            transform.position = Vector2.MoveTowards(transform.position, 
+                mousePosition, Time.deltaTime * playerSpeedMouse);
         }
 
         //Player Movement using keys
         if (movementOption == true)
         {
             // Ship movement if both right and left keys are pressed, or if the x position is within a certain limit
-            if (rightMove && leftMove)
-            {
-                horizontalMovement = 0;
-            }
-            else if (transform.position.x > 8.52 && !leftMove)
-            {
-                horizontalMovement = 0;
-            }
-            else if (transform.position.x < -8.52 && !rightMove)
+            if ((rightMove && leftMove) || (transform.position.x > 8.52 && !leftMove) 
+                || (transform.position.x < -8.52 && !rightMove))
             {
                 horizontalMovement = 0;
             }
@@ -120,15 +117,8 @@ public class PlayerMovement : MonoBehaviour
             }
 
             // Ship movement if both up and down keys are pressed or if the y position is within a certain limit
-            if (upMove && downMove)
-            {
-                verticalMovement = 0;
-            }
-            else if (transform.position.y > 4.4 && !downMove)
-            {
-                verticalMovement = 0;
-            }
-            else if (transform.position.y < -4.4 && !upMove)
+            if ((upMove && downMove) || (transform.position.y > 4.4 && !downMove) 
+                || (transform.position.y < -4.4 && !upMove))
             {
                 verticalMovement = 0;
             }
@@ -138,15 +128,18 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Implement Movement
-            if (playerSpeedKey < playerSpeedFinal && (rightMove || leftMove || upMove || downMove))
+            if (playerSpeedKey < playerSpeedFinal && 
+                (rightMove || leftMove || upMove || downMove))
             {
                 playerSpeedKey *= playerAcceleration;
             }
-            else if (playerSpeedKey >= playerSpeedFinal && (rightMove || leftMove || upMove || downMove))
+            else if (playerSpeedKey >= playerSpeedFinal && 
+                (rightMove || leftMove || upMove || downMove))
             {
                 playerSpeedKey = playerSpeedFinal;
             }
-            else if (playerSpeedKey > 1 && (rightMove == false && leftMove == false && upMove == false && downMove == false))
+            else if (playerSpeedKey > 1 && 
+                (rightMove == false && leftMove == false && upMove == false && downMove == false))
             {
                 playerSpeedKey /= playerAcceleration;
             }

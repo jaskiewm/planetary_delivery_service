@@ -18,7 +18,7 @@ public class EnemyBossShooting1 : MonoBehaviour
 
     private void Start()
     {
-        enemyShootTime = UnityEngine.Random.Range(2f, 4f);
+        enemyShootTime = UnityEngine.Random.Range(1f, 3f);
         enemyBossHealth = GetComponent<EnemyBossHealth>();
     }
 
