@@ -1104,7 +1104,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorEnter
           m_Mode: 1
@@ -1120,7 +1120,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorExit
           m_Mode: 1
@@ -1136,7 +1136,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorClick
           m_Mode: 1
@@ -1553,7 +1553,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorEnter
           m_Mode: 1
@@ -1569,7 +1569,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorExit
           m_Mode: 1
@@ -1585,7 +1585,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorClick
           m_Mode: 1
@@ -2170,8 +2170,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 778594367}
-        m_TargetAssemblyTypeName: options, Assembly-CSharp
-        m_MethodName: movement
+        m_TargetAssemblyTypeName: Options, Assembly-CSharp
+        m_MethodName: MovementOptions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2789,7 +2789,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorEnter
           m_Mode: 1
@@ -2805,7 +2805,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorExit
           m_Mode: 1
@@ -2821,7 +2821,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorClick
           m_Mode: 1
@@ -3122,7 +3122,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorEnter
           m_Mode: 1
@@ -3138,7 +3138,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorExit
           m_Mode: 1
@@ -3154,7 +3154,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1190459899}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnButtonCursorClick
           m_Mode: 1
@@ -3277,7 +3277,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190459900}
-  - component: {fileID: 1190459899}
   m_Layer: 0
   m_Name: CursorManager
   m_TagString: Untagged
@@ -3285,22 +3284,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1190459899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190459898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc6f0855beb94c9469f14e6ea7899d36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor_normal: {fileID: 0}
-  normalCursorHotspot: {x: 0, y: 0}
-  cursor_OnButton: {fileID: 2800000, guid: 930ed6febc3c88844b798c02d4520f39, type: 3}
-  onButtonCursorHotspot: {x: 0, y: 0}
 --- !u!4 &1190459900
 Transform:
   m_ObjectHideFlags: 0
