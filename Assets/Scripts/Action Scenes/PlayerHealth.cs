@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
             invincibility = false;
             invincibleTime = invincibleTimeStart;
         }
-        SetHealth(health);
+        setHealth(health);
         invincibleSlider.value = invincibleTime;
     }
     private void OnCollisionEnter2D(Collision2D col)

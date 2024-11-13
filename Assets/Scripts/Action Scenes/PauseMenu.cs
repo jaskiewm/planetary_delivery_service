@@ -12,7 +12,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (!isGamePaused)
         {
-            Resume();
+            ResumeGame();
         }
     }
 
@@ -23,21 +23,21 @@ public class PauseMenu : MonoBehaviour
         {
             if (isGamePaused == true)
             {
-                Resume();
+                ResumeGame();
             }
             else
             {
-                Pause();
+                PauseGame();
             }
         }
     }
-    public void Resume()
+    public void ResumeGame()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
     }
-    void Pause()
+    public void PauseGame()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
