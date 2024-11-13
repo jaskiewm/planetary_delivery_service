@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class mouseControl : MonoBehaviour
 {
     Text moveText;
+    private Options movementOption = new Options();
 
     private void Start()
     {
@@ -15,14 +16,10 @@ public class mouseControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (options.movementOption == false) //false = mouse , true = keybindings
-        {
+        if (movementOption.GetMovement() == false) //false = mouse , true = keybindings
             moveText.text = "Mouse";
-        }
         else //false = mouse , true = keybindings
-        {
             moveText.text = "Keys";
-        }
 
     }
 }

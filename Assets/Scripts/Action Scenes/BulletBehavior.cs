@@ -20,7 +20,7 @@ public class BulletBehavior : MonoBehaviour
     {
         if (zHasShot == false)
         {
-            if (options.movementOption == true)
+            if (Options.movementOption == true)
             {
                 //If you click "Z", the bullet will have a force in the +ve x direction
                 if (Input.GetKeyDown("z") & Time.timeScale != 0f)
@@ -37,7 +37,7 @@ public class BulletBehavior : MonoBehaviour
                     }
                 }
             }
-            else if (options.movementOption == false)
+            else if (Options.movementOption == false)
             {
                 //If you click "mouse button down", the bullet will have a force in the +ve x direction
                 if (Input.GetMouseButtonDown(0) & Time.timeScale != 0f)
