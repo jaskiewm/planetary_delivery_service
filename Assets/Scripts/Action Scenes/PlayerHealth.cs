@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int health;
+    [SerializeField]
+    int health;
+    public int CurrentHealth => health;
+
     private int healthMax = 3;
     private bool invincibility = false;
-    public float invincibleTimeStart = 5;
+    public float invincibleTimeStart = 3;
     public float invincibleTime;
     public Slider healthSlider;
     public Slider invincibleSlider;
@@ -44,7 +47,11 @@ public class PlayerHealth : MonoBehaviour
     }
     public int getHealth()
     {
-        return health;
+        return CurrentHealth;
+    }
+    public void setHealth(float HealthValue)
+    {
+        healthSlider.value = HealthValue;
     }
     private void receiveSpaceshipDamage(int damageAmount)
     {
@@ -52,22 +59,5 @@ public class PlayerHealth : MonoBehaviour
         invincibility = true;
 
         Debug.Log("Health Remaining: " + health + "/3");
-
-        if (health == 0)
-        {
-            Debug.Log("Health = 0");
-        }
-    }
-    private void spaceshipHeal(int healAmount)
-    {
-        health += healAmount;
-        if (health >= healthMax)
-        {
-            health = healthMax;
-        }
-    }
-    public void SetHealth(float HealthValue)
-    {
-        healthSlider.value = HealthValue;
     }
 }
