@@ -24,6 +24,7 @@ public class EndGame: MonoBehaviour
         if (playerhealth.getHealth() <= 0)
         {
             Time.timeScale = 0f;
+            Cursor.visible = true;
             EndMenuUI.SetActive(true);
         }  
     }
@@ -31,12 +32,14 @@ public class EndGame: MonoBehaviour
     // Click to play again
     public void OnClickPlayAgain()
     {
+        Cursor.visible = false;
         SceneManager.LoadScene("MainGame");
     }
 
     // Click to quit
     public void OnClickQuit()
     {
+        Cursor.visible = true;
         Time.timeScale = 1f;
         EndMenuUI.SetActive(false);
         SceneManager.LoadScene("MainMenu");
