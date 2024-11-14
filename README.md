@@ -39,6 +39,19 @@
 ### Installation & Usage
 Game is currently in-development
 
+<!-- ROADMAP -->
+## Roadmap
+The roadmap may change overtime depending on scope changes and time availability
+- [x] Add lose screen
+- [ ] Add story and end scenes
+- [ ] Improve AI movement
+- [ ] Include more settings
+    - [ ] Sound / Music Options
+    - [ ] Keybinding
+    - [ ] Brightness
+- [ ] Improve UI elements
+    - [ ] Health, Cooldown, and Invincibility Bar
+
 <!-- CONTRIBUTING -->
 ### Contributors:
 <a href="https://github.com/jaskiewm/planetary_delivery_service/graphs/contributors">
