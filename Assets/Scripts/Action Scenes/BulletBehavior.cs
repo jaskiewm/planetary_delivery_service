@@ -49,16 +49,16 @@ public class BulletBehavior : MonoBehaviour
 
         if (overHeatCounter > 0 & zHasShot == false)
         {
-            overHeatCounter -= 0.1f;
+            overHeatCounter -= (50f * Time.deltaTime);
         }
 
-        if (overHeatCounter > 200 & zHasShot == false)
+        if (overHeatCounter > 200f & zHasShot == false)
         {
             zHasShot = true;
         }
-        else if (overHeatCounter > 0 & overHeatCounter <= 300 & zHasShot == true)
+        else if (overHeatCounter > 0 & overHeatCounter <= 300f & zHasShot == true)
         {
-            overHeatCounter -= 0.15f;
+            overHeatCounter -= (37.5f * Time.deltaTime);
         }
         else if (overHeatCounter < 0 & zHasShot == true)
         {
