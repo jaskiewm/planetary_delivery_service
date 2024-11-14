@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Options : MonoBehaviour
+public class Options: MonoBehaviour
 {
     public static bool movementOption = false; //false = mouse , true = keybindings
 
