@@ -1,4 +1,6 @@
 <a id="readme-top"></a>
+![in-progress]
+<br><br>
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -63,7 +65,7 @@ The roadmap may change overtime depending on scope changes and time availability
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[in-progress]: https://img.shields.io/badge/project--status-work--in--progress-orange?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/jaskiewm/planetary_delivery_service.svg?style=for-the-badge
 [contributors-url]: https://github.com/jaskiewm/planetary_delivery_service/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/jaskiewm/planetary_delivery_service.svg?style=for-the-badge
